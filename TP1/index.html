@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP1 - Cours HTML Complet</title>
+</head>
+<body>
+    <h1>TP1 - Utilisation des balises, des tableaux, des formulaires HTML uniquement (sans CSS)</h1>
+    <p>Ce document contient toutes les notions essentielles de HTML/HTML5 expliquées et accompagnées d'exemples : balises, liens, médias, tableaux, balises structurantes, modèles boîtes et formulaires.</p>
+
+    <br />
+    <!-- 2. -->
+    <h2>2. Manipulations des balises HTML fondamentales</h2>
+
+    <h3>Affichage des titres (&lt;h1&gt; à &lt;h6&gt;)</h3>
+    <p>Ces balises permettent de structurer le contenu par niveaux de titres</p>
+    <p><u>Exemple :</u></p>
+    <h1>Titre de niveau 1</h1>
+    <h2>Titre de niveau 2</h2>
+    <h3>Titre de niveau 3</h3>
+    <h4>Titre de niveau 4</h4>
+    <h5>Titre de niveau 5</h5>
+    <h6>Titre de niveau 6</h6>
+
+    <h3>Ecriture des paragraphes (&lt;p&gt;)</h3>
+    <p>Cette balise sert à écrire du texte structuré sous forme de paragraphes.</p>
+
+    <h3>Utilisation de la mise en valeur (&lt;strong&gt; et &lt;em&gt;)</h3>
+    <p>
+        <strong>&lt;strong&gt;</strong> sert à mettre un tetxe en valeur (important) en le rendant gras.<br />
+        <em>&lt;em&gt;</em> sert à donner une emphase (accentuation) à un texte en le rendant italique.
+    </p>
+
+    <h3>Création des listes ordonnées et non ordonnées (&lt;ul&gt;, &lt;ol&gt; et &lt;li&gt;)</h3>
+    <p>Ces balises permettent de créer des listes non ordonnées et ordonnées.</p>
+    <ul>
+        <li>Liste non ordonnée : element 1</li>
+        <li>Liste non ordonnée: element 2</li>
+        <li>Liste non ordonnée: element 3</li>
+    </ul>
+    <ol>
+        <li>Liste ordonnée : element 1</li>
+        <li>Liste ordonnée : element 2</li>
+        <li>Liste ordonnée : element 3</li>
+    </ol>
+
+    <br />
+    <!-- 3. -->
+    <h2>3. Création et gestion de différents types de liens</h2>
+
+    <h3>&lt;a&gt; - Lien hypertexte</h3>
+    <p>Cette balise permet de créer des liens internes, externes, ver un e-mail ou vers téléphone</p>
+
+    <p>
+        Lien externe :
+        <a href="https://www.google.com" target="_blank" title="Mon lien" rel="noopener">Visiter Google</a>
+    </p>
+
+    <p>
+        Lien e-mail :
+        <a href="mailto:contact@example.com">Envoyer un e-mail</a>
+    </p>
+
+    <p>
+        Lien téléphone :
+        <a href="tel:+212627895656">Appeler moi</a>
+    </p>
+
+    <br />
+    <!-- 4. Médias -->
+    <h2>4. Images, audio et vidéo</h2>
+    <h3>&lt;img&gt; -  Image</h3>
+    <p>Permet d'insérer une ilmages dans la page.</p>
+    <img src="./pexels-luis-gomes-166706-546819.jpg" alt="Image" width="200">
+
+    <h3>&lt;audio&gt; - Audio</h3>
+    <p>Permet d'inserer ubn fichier audio avec lecteur</p>
+    <audio controls>
+        <source src="./audio.mp3" type="audio/mpeg">
+    </audio>
+
+    <h3>&lt;video&gt; - Vidéo</h3>
+    <p>Permet d'insérer une vidéo avec lecteur HTML5</p>
+    <video width="300" controls>
+        <source src="./video.mp4" type="video/mp4">
+    </video>
+
+    <!-- Utilisation de la balise iframe (Vidéo youtube) -->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/zKGW9V1WSl8?si=I_MC4s7yb-jfmOeF"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <br />
+    <!-- 5. Création des tableaux simple -->
+    <h2>5. Création des tableaux simple</h2>
+    <h3>Tableau simple</h3>
+    <p>Un tableau basique comportant uniquement des cellules.</p>
+    <table border="1">
+        <tr>
+            <td>Nom</td>
+            <td>Age</td>
+        </tr>
+        <tr>
+            <td>Ahmed</td>
+            <td>30</td>
+        </tr>
+    </table>
+
+    <br />
+    <h3>Tableau intermédiaire</h3>
+    <p>Introduction des en-têtes avec &lt;th&gt; et plusieurs lignes</p>
+    <table border="1">
+        <!-- 1ère ligne -->
+        <tr>
+            <th>Pays</th> <!-- 1ère en-tête -->
+            <th>Capitale</th> <!-- 2ème en-tête -->
+            <th>Population</th> <!-- 3ème en-tête -->
+        </tr>
+
+        <!-- 2ème ligne -->
+        <tr>
+            <td>Maroc</td>
+            <td>Rabat</td>
+            <td>36 millions</td>
+        </tr>
+
+        <!-- 3ème ligne -->
+        <tr>
+            <td>France</td>
+            <td>Paris</td>
+            <td>67 millions</td>
+        </tr>
+    </table>
+
+    <br />
+    <h3>Tableau avancé</h3>
+    <p>Utilisation de &lt;caption&gt;, &lt;thead&gt;, &lt;tbody&gt; et fusion de cellules (colspan et rowspan)</p>
+    <table border="1">
+        <!-- Légende du tableau -->
+        <caption>Statistiques</caption> 
+
+        <!-- En-tête du tableau -->
+        <thead>
+            <tr>
+                <th rowspan="2">Année</th>
+                <th colspan="2">Ventes</th>
+            </tr>
+            <tr>
+                <th>Magasin</th>
+                <th>En ligne</th>
+            </tr>
+        </thead>
+
+        <!-- Corps du tableau -->
+        <tbody>
+            <tr>
+                <td>2022</td>
+                <td>5000</td>
+                <td>3000</td>
+            </tr>
+            <tr>
+                <td>2023</td>
+                <td>7000</td>
+                <td>4000</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br />
+    <!-- Tableau bonus -->
+    <table border="1">
+        <caption>Tableau Bonus</caption>
+
+        <tr>
+            <td>Cellule 1</td>
+            <td colspan="2" rowspan="2">Cellule 5</td>
+        </tr>
+
+        <tr>
+            <td>Cellule 2</td>
+        </tr>
+
+        <tr>
+            <td>Cellule 3</td>
+            <td colspan="2">Cellule 7</td>
+        </tr>
+
+        <tr>
+            <td>Cellule 4</td>
+            <td>Cellule 8</td>
+            <td>Cellule 12</td>
+        </tr>
+    </table>
+
+    <br />
+    <!-- 6. Utilisation des balises structurantes -->
+    <h2>6. Utilisation des balises structurantes</h2>
+    <p>Ces balises servent à organiser la page en zones logiques</p>
+
+    <header>
+        <h3>Header - En-tête de page</h3>
+    </header>
+
+    <nav>
+        <p>Nav - Menu de navigation</p>
+    </nav>
+
+    <section>
+        <h4>Section - Zone principale regroupant des contenus liés</h4>
+    </section>
+
+    <article>
+        <h4>Article - Contenu indépendantn (ex : actualité)</h4>
+    </article>
+
+    <aside>
+        <p>Aside - Informations secondaires (ex : publicité)</p>
+    </aside>
+
+    <footer>
+        <p>Footer - Pied de page (copyright, liens légaux, ...)</p>
+    </footer>
+
+    <br />
+    <!-- 7. Compréhension des modèles de boîtes HTML(type block et inline) -->
+    <h2>7. Compréhension des modèles de boîtes HTML(type block et inline)</h2>
+    <h3>&lt;div&gt;</h3>
+    <p>Boîte générale servant à regrouper des éléments.</p>
+    <div>
+        Ceci est un bloc DIV
+    </div>
+
+    <h3>&lt;span&gt;</h3>
+    <p>Conteneur en ligne intégré dans une phrase : <span style="color: red;">Ceci est un span</span> blabla blabla.</p>
+
+    <h3>&lt;figure&gt; et &lt;figcaption&gt;</h3>
+    <p>Permettent d'afficher une image avec une légende</p>
+    <figure>
+        <img src="./pexels-luis-gomes-166706-546819.jpg" alt="Exemple image" width="200">
+        <figcaption>Légende de l'image</figcaption>
+    </figure>
+
+    <br />
+    <!-- 8. Création des formulaires HTML complets (3 niveaux de difficultés) -->
+    <h2>8. Création des formulaires HTML complets (3 niveaux de difficultés)</h2>
+
+    <!-- Formulaire simple -->
+    <h3>Formulaire simple</h3>
+    <form action="">
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom" placeholder="vote nom"><br /><br />
+
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" placeholder="votre email"><br /><br />
+
+        <input type="submit" value="Envoyer">
+    </form>
+    
+    <!-- Formulaire intermédiaire -->
+    <h3>Formulaire intermédiaire</h3>
+    <p>Introduction de textarea, select, radio et checkbox.</p>
+    <form action="">
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom" placeholder="vote nom"><br /><br />
+
+        <label for="email">Email :</label>
+        <input type="text" id="email" name="email" placeholder="votre email"><br /><br />
+
+        <!-- Type radio -->
+        <label>Genre :</label><br />
+        <label for="homme">Homme :</label>
+        <input type="radio" id="homme" name="genre" value="homme">
+        <label for="femme">Femme :</label>
+        <input type="radio" id="femme" name="genre" value="femme">
+        <br /><br />
+
+        <!-- Type checkbox -->
+        <label>Centres d'intérêts :</label><br />
+        <input type="checkbox" id="sport" name="inerets" value="sport">
+        <label for="sport">Sport</label>
+
+        <input type="checkbox" id="lecture" name="inerets" value="lecture">
+        <label for="lecture">Lecture</label>
+
+        <input type="checkbox" id="musique" name="inerets" value="musique">
+        <label for="musique">Musique</label>
+        <br /><br />
+
+        <!-- Type select -->
+        <label for="pays">Pays :</label><br />
+        <select id="pays" name="pays">
+            <option value="">Séléctionnez un pays</option>
+            <option value="maroc">Maroc</option>
+            <option value="france">France</option>
+            <option value="canada">Canada</option>
+            <option value="belgique">Belgique</option>
+        </select>
+        <br /><br />
+
+        <!-- Type textarea -->
+        <label for="message">Message :</label><br/>
+        <textarea name="message" id="message" rows="4" cols="50" placeholder="votre message"></textarea>
+        <br /><br />
+
+        <input type="submit" value="Envoyer">
+    </form>
+
+    <!-- Formulaire avancé -->
+    <h3>Formulaire avancé</h3>
+    <p>Utilisation d'input HTML5 avancés + fieldset /legend</p>
+
+    <form action="">
+        <fieldset>
+            <legend>Informations personnelles</legend>
+
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" placeholder="Votre nom"><br /><br />
+
+            <label for="prenom">Prénom :</label>
+            <input type="text" id="prenom" name="prenom" placeholder="Votre prénom"><br /><br />
+
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" placeholder="Votre email"><br /><br />
+
+            <label for="date_naissance">Date de naissance :</label>
+            <input type="date" id="date_naissance" name="date_naissance"><br /><br />
+
+            <label for="telephone">Téléphone</label>
+            <input type="tel" id="telephone" name="telephone" placeholder="Ex :+212 6 27 89 56 56"><br /><br />
+        </fieldset>
+
+        <fieldset>
+            <legend>Paramètres</legend>
+
+            <label for="quantite">Quantité :</label>
+            <input type="number" name="quantite" id="quantite" min="1" max="100"><br /><br />
+
+            <label for="coleur-pref">Couleur préférée</label>
+            <input type="color" name="coleur-pref" id="coleur-pref"><br /><br />
+
+            <label for="photo">Photo :</label>
+            <input type="file" name="photo" id="photo" placeholder="Sélectionnez un fichier"><br /><br />
+
+            <label for="lien-linkedin">Votre lien linkedin</label>
+            <input type="url" name="lien-linkedin" id="lien-linkedin" placeholder="ex : https://linkedin.com/nom-utilisateur">
+        </fieldset>
+
+        <br />
+        <button type="submit">Envoyer</button>
+    </form>
+</body>
+</html>
