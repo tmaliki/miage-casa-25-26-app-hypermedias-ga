@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px
+}
+
+h1 {
+    text-align: center;
+    color: navy;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Suppression des espaces entre les cellules*/
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #333;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #17a2b8;
+    color: #ffffff;
+}
+
+/*
+nth-child : permet de cibler un enfant spécifique
+even : permet de cibler les lignes paires
+*/
+tr:nth-child(even) {
+    background-color: #dadada;
+}
+
+tr:hover {
+    background-color: #b0c0d0;
+    cursor: pointer;
+}

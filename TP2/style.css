@@ -60,3 +60,12 @@ button:hover {
     text-align: center;
     line-height: 100px;
 }
+
+/* Web reponsive (Media queries) */
+@media screen and (max-width: 768px) {
+    /* styles pour tablettes */
+}
+
+@media screen and (max-width: 480px) {
+    /* styles pour mobiles */
+}
