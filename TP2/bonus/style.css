@@ -1,0 +1,55 @@
+body {
+    font-family: 'Segoe UI', sans-serif; /* Définit la police principale utilisée sur toute la page */
+    margin: 0; /* Supprime les marges par défaut du navigateur */
+    height: 100vh; /* Définit la hauteur du body à 100 % de la hauteur de la fenêtre */
+    display: flex; /* Active le mode Flexbox pour organiser les éléments enfants */
+    flex-direction: column; /* Dispose les éléments enfants verticalement (de haut en bas) */
+    justify-content: center; /* Centre les éléments verticalement dans la page */
+    align-items: center; /* Centre les éléments horizontalement dans la page */
+}
+
+h1 {
+    text-align: center;
+    color: #b83517;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse; /* supprime les doubles bordures */
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3); /* ombre portée */
+}
+
+caption {
+    caption-side: top;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #000a68;
+}
+
+th,
+td {
+    border: 2px solid #333;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #17a2b8;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tbody tr:hover {
+    background-color: #ffeeba;
+    cursor: pointer;
+}
+
+td {
+    border-radius: 5px;
+    /* coins légèrement arrondis */
+}
