@@ -75,3 +75,199 @@ body {
     font-size: 22px;
     padding: 14px;
 }
+
+/*Different type de bouton*/
+.btn {
+    width: 100%;
+    border: none; /*Supprime les bordures par défaut*/
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn2 {
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 20px;
+    padding: 15px;
+}
+
+/*Taille des boutons*/
+.btn-lg {
+    height: 60px;
+    font-size: 26px;
+}
+
+.btn-md {
+    height: 40px;
+    font-size: 20px;
+}
+
+.btn-sm {
+    height: 20px;
+    font-size: 15px;
+}
+
+/*Les couleurs des boutons*/
+.btn-primary {
+    background-color: #1178F2;
+    color: #FFFFFF;
+}
+
+.btn-success {
+    background-color: #28A745;
+    color: #FFFFFF;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.forgotten-link {
+    text-decoration: none;
+    color: #1178F2;
+}
+
+hr {
+    margin-top: 20px;
+}
+
+/*Responsive media queries*/
+@media (max-width: 1024px) {
+    /*test*/
+    /* body {
+        background-color: red;
+    } */
+
+    .container {
+        margin: 0 60px;
+    }
+
+    .logo-section {
+        width: 50%;
+        margin-right: 30px;
+    }
+
+    .logo-section > .logo {
+        width: 240px;
+    }
+
+    .logo-section > p {
+        font-size: 32px;
+    }
+
+    .login-section {
+        width: 50%;
+    }
+
+    .btn-lg {
+        height: 48px;
+        font-size: 24px;
+    }
+
+    .btn2 {
+        padding: 12px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    /*test*/
+    /* body {
+        background-color: green;
+    } */
+    .container {
+        margin: 20px; /* Réduit les marges pour écrans tablette */
+        display: flex; /* Utilise flexbox */
+        flex-direction: column; /* Empile les éléments verticalement */
+        align-items: stretch; /* Étire les enfants horizontalement */
+        height: auto; /* Hauteur automatique */
+        padding-top: 40px; /* Espacement interne en haut */
+        padding-bottom: 40px; /* Espacement interne en bas */
+    }
+
+    .logo-section,
+    .login-section {
+        width: 100%; /* Largeur pleine pour les deux sections */
+        margin-right: 0; /* Supprime la marge droite */
+    }
+
+    .logo-section {
+        text-align: left; /* Aligne le texte à gauche */
+        margin-bottom: 18px; /* Ajoute marge inférieure pour espacer */
+    }
+
+    .logo-section > .logo {
+        width: 200px; /* Réduit la largeur du logo image */
+    }
+
+    .logo-section > p {
+        font-size: 28px; /* Réduit la taille de police */
+    }
+
+    .login-form {
+        padding: 24px; /* Réduit le padding du formulaire */
+    }
+
+    .form-group .form-control {
+        height: 56px; /* Réduit la hauteur des champs */
+        font-size: 18px; /* Réduit la taille de police */
+        padding: 12px; /* Réduit le padding */
+    }
+
+    .btn-lg {
+        height: 48px; /* Réduit la hauteur du bouton */
+        font-size: 20px; /* Réduit la taille de police */
+    }
+
+    .btn2 {
+        padding: 12px; /* Réduit le padding */
+        font-size: 18px; /* Réduit la taille de police */
+    }
+
+    .login-section > p {
+        font-size: 18px; /* Réduit la taille de police */
+        text-align: left; /* Aligne le texte à gauche */
+    }
+
+    .text-center {
+        text-align: left; /* Aligne à gauche au lieu du centre */
+    }
+}
+
+@media (max-width: 480px) {
+    /*test*/
+    /* body {
+        background-color: blue;
+    } */
+    .container {
+        margin: 0 12px; /* Réduit les marges pour petits écrans */
+    }
+
+    .logo-section > .logo {
+        width: 160px; /* Réduit fortement la largeur du logo image */
+    }
+
+    .logo-section > p {
+        font-size: 22px; /* Réduit fortement la taille de police */
+    }
+
+    .form-group .form-control {
+        height: 48px; /* Réduit la hauteur des champs */
+        font-size: 16px; /* Réduit la taille de police */
+        padding: 10px; /* Réduit le padding */
+    }
+
+    .btn-lg {
+        height: 44px; /* Réduit la hauteur du bouton */
+        font-size: 18px; /* Réduit la taille de police */
+    }
+
+    .login-form {
+        padding: 18px; /* Réduit le padding du formulaire */
+    }
+
+    hr {
+        margin-top: 14px; /* Réduit la marge de la ligne horizontale */
+    }
+}
